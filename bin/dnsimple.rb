@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-$:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'dnsimple'
+
+$:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'dnsimple/cli'
 
 cli = DNSimple::CLI.new
