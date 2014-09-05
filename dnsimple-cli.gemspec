@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.extra_rdoc_files = %w( README.markdown CHANGELOG.markdown LICENSE )
 
+  s.add_dependency  'httparty', RUBY_VERSION < "1.9.3" ? [">= 0.10", "< 0.12"] : "~> 0.12"
   s.add_dependency  'dnsimple', '=2.0.0.a'
 
   s.add_development_dependency 'rake'
