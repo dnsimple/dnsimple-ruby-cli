@@ -1,3 +1,31 @@
+# DNSimple Ruby Command Line Tool
+
+A Ruby Command Line Interface (CLI) for the [DNSimple API](http://developer.dnsimple.com).
+
+[DNSimple](https://dnsimple.com/) provides DNS hosting
+and domain registration that is simple and friendly.
+
+We provide a full API and an easy-to-use web interface so you can get
+your domain registered and set up with a minimal amount of effort.
+
+## Installation
+
+  $ gem install dnsimple-cli
+
+## Credentials
+
+Create a file in your home directory called `.dnsimple`.
+
+In this file add the following:
+
+    username: YOUR_USERNAME
+    password: YOUR_PASSWORD
+
+Or if using an API token
+
+    username: YOUR_USERNAME
+    api_token: YOUR_API_TOKEN
+
 ## Commands
 
 The commands available are:
