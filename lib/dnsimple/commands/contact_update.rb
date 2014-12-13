@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class ContactUpdate
       # Execute the contact:update command.

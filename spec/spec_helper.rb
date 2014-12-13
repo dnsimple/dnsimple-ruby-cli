@@ -9,13 +9,13 @@ unless defined?(SPEC_ROOT)
 end
 
 #if ENV['DNSIMPLE_TEST_CONFIG']
-  #DNSimple::Client.load_credentials(ENV['DNSIMPLE_TEST_CONFIG'])
-  #CONFIG = { 'username' => DNSimple::Client.username, 'password' => DNSimple::Client.password, 'base_uri' => DNSimple::Client.base_uri, 'host' => URI.parse(DNSimple::Client.base_uri).host }
+  #Dnsimple::Client.load_credentials(ENV['DNSIMPLE_TEST_CONFIG'])
+  #CONFIG = { 'username' => Dnsimple::Client.username, 'password' => Dnsimple::Client.password, 'base_uri' => Dnsimple::Client.base_uri, 'host' => URI.parse(Dnsimple::Client.base_uri).host }
 #else
   #CONFIG = { 'username' => 'username', 'password' => 'password', 'base_uri' => 'https://api.sandbox.dnsimple.com/', 'host' => 'api.sandbox.dnsimple.com' }
-  #DNSimple::Client.base_uri = CONFIG['base_uri']
-  #DNSimple::Client.username = CONFIG['username']
-  #DNSimple::Client.password = CONFIG['password']
+  #Dnsimple::Client.base_uri = CONFIG['base_uri']
+  #Dnsimple::Client.username = CONFIG['username']
+  #Dnsimple::Client.password = CONFIG['password']
 #end
 
 

@@ -5,7 +5,7 @@ require 'dnsimple'
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 require 'dnsimple/cli'
 
-cli = DNSimple::CLI.new
+cli = Dnsimple::CLI.new
 
 require 'optparse'
 

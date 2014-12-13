@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class DomainCreate
       def execute(args, options = {})

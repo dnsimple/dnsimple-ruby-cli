@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class CertificateSubmit
       def execute(args, options = {})
@@ -6,8 +6,8 @@ module DNSimple
         certificate_id = args.shift
         approver_email = args.shift
         
-        domain = DNSimple::Domain.find(domain_name)
-        certificate = DNSimple::Certificate.find(domain, certificate_id)
+        domain = Domain.find(domain_name)
+        certificate = Certificate.find(domain, certificate_id)
         certificate.submit(approver_email)
 
         puts "Certificate submitted, authorization by email required"

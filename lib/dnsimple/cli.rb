@@ -1,12 +1,47 @@
-module DNSimple
+require 'yaml'
+
+module Dnsimple
 
   class CommandNotFound < RuntimeError
   end
 
   class CLI
 
+    def self.load_credentials_if_necessary
+      credentials_loaded? || load_credentials
+    end
+
+    def self.config_path
+      ENV['DNSIMPLE_CONFIG'] || '~/.dnsimple'
+    end
+
+    def self.load_credentials(path = config_path)
+      client = DNSimple::Client
+      begin
+        credentials = YAML.load_file(File.expand_path(path))
+        client.username       = credentials['username']
+        client.password       = credentials['password']
+        client.exchange_token = credentials['exchange_token']
+        client.api_token      = credentials['api_token']
+        client.domain_api_token = credentials['domain_api_token']
+        client.base_uri       = credentials['site']       if credentials['site']
+        client.base_uri       = credentials['base_uri']   if credentials['base_uri']
+        @credentials_loaded = true
+        puts "Credentials loaded from #{path}"
+      rescue => error
+        puts "Error loading your credentials: #{error.message}"
+        exit 1
+      end
+    end
+
+    def self.credentials_loaded?
+      client = DNSimple::Client
+      (@credentials_loaded ||= false) or client.domain_api_token or (client.username and (client.password or client.api_token))
+    end
+
+
     def execute(command_name, args, options={})
-      DNSimple::Client.load_credentials_if_necessary
+      DNSimple::CLI.load_credentials_if_necessary
       command = commands[command_name]
       if command
         begin

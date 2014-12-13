@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class TemplateDelete
       def execute(args, options = {})

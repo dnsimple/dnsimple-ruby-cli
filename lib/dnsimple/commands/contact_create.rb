@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
 
     # Command to create a contact.

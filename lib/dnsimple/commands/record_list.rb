@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class RecordList
       def execute(args, options = {})

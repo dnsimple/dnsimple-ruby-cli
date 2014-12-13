@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class TemplateRecordList
       def execute(args, options = {})

@@ -1,9 +1,9 @@
 require 'spec_helper'
 require 'dnsimple/commands/record_list'
 
-describe DNSimple::Commands::RecordList do
+describe Dnsimple::Commands::RecordList do
   before do
-    DNSimple::Record.expects(:all).with(instance_of(DNSimple::Domain)).returns(records)
+    Dnsimple::Record.expects(:all).with(instance_of(Dnsimple::Domain)).returns(records)
   end
 
   let(:records) { [ record ] }
@@ -17,7 +17,7 @@ describe DNSimple::Commands::RecordList do
 
   let(:args) { [ domain_name ] }
   let(:domain_name) { 'example.com' }
-  let(:domain) { DNSimple::Domain.new(:name => domain_name) }
+  let(:domain) { Dnsimple::Domain.new(:name => domain_name) }
 
 end
 

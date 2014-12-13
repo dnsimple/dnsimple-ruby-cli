@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class ServiceListApplied
       def execute(args, options = {})

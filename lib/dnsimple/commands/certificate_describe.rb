@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class CertificateDescribe
       def execute(args, options = {})

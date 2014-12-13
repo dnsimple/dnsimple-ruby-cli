@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class ContactDescribe
       def execute(args, options = {})

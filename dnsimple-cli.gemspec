@@ -4,7 +4,7 @@ require 'dnsimple/cli/version'
 
 Gem::Specification.new do |s|
   s.name        = 'dnsimple-cli'
-  s.version     = DNSimple::CLI::VERSION
+  s.version     = Dnsimple::CLI::VERSION
   s.authors     = ['Anthony Eden', 'Simone Carletti']
   s.email       = ['anthony.eden@dnsimple.com', 'simone.carletti@dnsimple.com']
   s.homepage    = 'http://github.com/aetrion/dnsimple-ruby-cli'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.extra_rdoc_files = %w( README.markdown CHANGELOG.markdown LICENSE )
 
-  s.add_dependency  'dnsimple', '=2.0.0.a'
+  s.add_dependency  'dnsimple', '=2.0.0.alpha2'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'aruba'

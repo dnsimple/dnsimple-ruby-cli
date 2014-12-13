@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   class CLI
     VERSION = '1.0.0'
   end

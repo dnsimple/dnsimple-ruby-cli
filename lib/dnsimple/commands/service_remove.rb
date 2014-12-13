@@ -1,4 +1,4 @@
-module DNSimple
+module Dnsimple
   module Commands
     class ServiceRemove
       def execute(args, options = {})
