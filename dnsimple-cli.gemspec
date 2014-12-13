@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DNSimple::CLI::VERSION
   s.authors     = ['Anthony Eden', 'Simone Carletti']
   s.email       = ['anthony.eden@dnsimple.com', 'simone.carletti@dnsimple.com']
-  s.homepage    = 'http://github.com/aetrion/dnsimple-cli'
+  s.homepage    = 'http://github.com/aetrion/dnsimple-ruby-cli'
   s.summary     = 'A ruby CLI for the DNSimple API'
   s.description = 'A ruby CLI for the DNSimple API.'
 
